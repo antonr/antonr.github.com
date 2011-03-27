@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Anton - {{page.title}}</title>
-    <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  	<meta charset="utf-8">
+  	<title>{{ page.title }}</title>
+  	<meta name="description" content="Easy HTML5 Template">
+  	<meta name="author" content="">
+  	<!-- Delete these two icon references once you've placed them in the root directory with these file names -->
+  	<link rel="shortcut icon" href="/favicon.ico">
+  	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  	<link rel="stylesheet" href="/stylesheets/style.css">
+  	<link rel="stylesheet" href="/stylesheets/themes.css">
+  	<script src="/javascripts/all.js"></script>
   </head>
-  <body>
-    <div id="content" class="site">
-      {{ content }}
+  <body>    
+    <div id="main">
+      <h1><a href="/">Anton's Blog</a> &raquo; {{ page.title }}</h1>
+      <div id="content">
+        {{ content }}
+      </div>
+      <footer>
+      	copyright &copy; {{ 'now' | date: "%Y" }}
+      </footer>
     </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22082285-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
