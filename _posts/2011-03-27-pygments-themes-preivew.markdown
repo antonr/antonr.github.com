@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pygments Themes Preview
+stylesheet: themes.css
 ---
 
 <script type="text/javascript" charset="utf-8">
