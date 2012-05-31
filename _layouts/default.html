@@ -4,18 +4,24 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - Anton's Blog</title>
     <meta name="author" content="Anton Rogov">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    {% if page.stylesheet %}<link rel="stylesheet" href="/stylesheets/{{ page.stylesheet }}">{% endif %}
+    <link rel="stylesheet" href="/assets/bootstrap.css">
+    {% if page.stylesheet %}<link rel="stylesheet" href="/assets/{{ page.stylesheet }}">{% endif %}
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-  <body>    
-    <div id="main">
-      <h1><a href="/">Anton's Blog</a> &raquo; {{ page.title }}</h1>
-      <div id="content">
+  <body>
+    <div class="container">
+      <div class="span8 offset2">
+        <header>
+          <img src="https://secure.gravatar.com/avatar/730dcb0f4e855d47c14c0aa3c00b4f34?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48">
+          <a href="/">Anton's Blog</a>
+        </header>
         {{ content }}
+        <footer>
+          &copy; Anton Rogov {{ 'now' | date: "%Y" }}
+        </footer>
       </div>
-      <footer>
-      	copyright &copy; {{ 'now' | date: "%Y" }}
-      </footer>
     </div>
     <script type="text/javascript">
       var _gaq = _gaq || [];

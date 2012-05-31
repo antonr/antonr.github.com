@@ -8,7 +8,7 @@ stylesheet: themes.css
   function setTheme(select) {
     var theme = select.options[select.selectedIndex].text;
     document.getElementById("code").className = theme;
-  }  	  
+  }
 </script>
 
 <select id="theme" onchange="setTheme(this);">
